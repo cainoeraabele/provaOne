@@ -214,21 +214,18 @@ var board;
         return engine;
     }
 
-     function calculate_board_size(w, h) {
+    function calculate_board_size(w, h)
+    {
         var snap;
-        var p = $( ".boardBox" );
-        w = w || p.innerWidth();
-        //console.log("w:"+w);
-        h = h || window.innerHeight;
-        var height = $(window).scrollTop();
-        console.log("h: "+h+" w: "+w+" scroll page : "+height);
-        if (w > h) {
-            h =  w
-        } else {
-            h=w;
-            console.log("ok");
-        }
 
+        w = w || window.innerWidth;
+        h = h || window.innerHeight;
+
+        if (w > h) {
+            w = h
+        } else {
+            h = w;
+        }
 
         w = Math.round(w * .9);
 
@@ -444,11 +441,6 @@ var board;
                             cancelable: true,
                             open: true,
                         });
-                      if (moves.checkers.length && !stalemate_by_rules) {
-                        window.location.replace("/win-game");
-                      } else {
-                        window.location.replace("/lost-game");
-                      }
                     }
                     pause_game();
                 }
@@ -1569,8 +1561,8 @@ var board;
             }
         });
 
-        layout.rows[1].cells[0].appendChild(clock_els.w);
-        layout.rows[1].cells[2].appendChild(clock_els.b);
+        layout.rows[2].cells[0].appendChild(clock_els.w);
+        layout.rows[2].cells[2].appendChild(clock_els.b);
 
         G.events.attach("gameUnpaused", start_timer);
         G.events.attach("firstMove", start_timer);
@@ -1904,7 +1896,7 @@ var board;
             resize: resize,
         };
 
-        layout.rows[1].cells[0].appendChild(container_el);
+        layout.rows[1].cells[2].appendChild(container_el);
         container_el.appendChild(moves_el);
 
         G.events.attach("newGameBegins", reset_moves);
@@ -1943,30 +1935,25 @@ var board;
         }
     }
 
-    function create_table() {
+    function create_table()
+    {
         var table_info = [3, 3, 3];
 
-        layout.table = G.cde("div", {c: "container-fluid"});
+        layout.table = G.cde("div", {c: "table"});
         layout.rows = [];
 
-        table_info.forEach(function oneach(count, row) {
+        table_info.forEach(function oneach(count, row)
+        {
             var i;
 
             layout.rows[row] = {
                 cells: [],
             };
             for (i = 0; i < count; i += 1) {
-                if (i == 1){
-                    layout.rows[row].cells[i] = G.cde("div", {c: "col-xs-12 col-md-6 boardBox"});
-                }
-                else{
-                    layout.rows[row].cells[i] = G.cde("div", {c: "col-xs-12 col-md-3"});
-                }
-
-
+                layout.rows[row].cells[i] = G.cde("div", {c: "td table_cell_" + row + "_" + i});
 
             }
-            layout.rows[row].el = G.cde("div", {c: "row"}, layout.rows[row].cells);
+            layout.rows[row].el = G.cde("div", {c: "tr table_row_" + row}, layout.rows[row].cells);
             layout.table.appendChild(layout.rows[row].el);
         });
 
@@ -1976,8 +1963,8 @@ var board;
         ];
         layout.center_cells[0].align = "right";
         layout.center_cells[1].align = "left";
-        layout.center_row = G.cde("div", {c: "tr center_tr"}, layout.center_cells);
-        layout.center_table = G.cde("div", {c: "tableold"}, [layout.center_row]);
+        layout.center_row   = G.cde("div", {c: "tr center_tr"}, layout.center_cells);
+        layout.center_table = G.cde("div", {c: "table center_table"}, [layout.center_row]);
         layout.rows[1].cells[1].appendChild(layout.center_table);
     }
 

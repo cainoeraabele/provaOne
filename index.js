@@ -11,7 +11,7 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var hbs = require('express-hbs');
 
-var env = process.env.NODE_ENV || 'default';
+var env = process.env.NODE_ENV || 'production';
 var config = require('config');
 
 var app = express();

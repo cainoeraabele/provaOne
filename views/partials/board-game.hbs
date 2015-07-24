@@ -6,7 +6,7 @@
 </div>
 -->
 <!-- Header - Fixed menu -->
-<header class="navbar-fixed-top">
+<header>
     <div class="container">
         <nav class="navbar navbar-custom navbar-top" role="navigation">
             <div class="container">
@@ -22,12 +22,11 @@
                     <ul class="nav navbar-nav navigation">
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         {{#if user}}
-                        <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a>
-                        </li>
-                        <li><a href="/logout" class="btn btn-danger top-login">Log Out</a>
-                        </li>
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
                         {{else}}
-                        <li><a href="/login" class="btn btn-danger top-login">Log in</a> {{/if}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -38,82 +37,75 @@
 </header>
 
 <!-- Top wrap - Slider -->
-<div class="slider-wrap home-login-img board_bg" id="1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-8">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-                    </div>
+<div class="slider-wrap home-login-img" id="1">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="board">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="level">
+                  <img src="images/Quintessa.jpg" class="img-small img-center img-responsive">
+                  <p class="text-center"><a href="/play-level" class="btn btn-danger">Play Chess</a></p>
+               </div>
+              </div>
+              <div class="col-md-3">
+                <div class="level">
+                  <img src="images/Roland.jpg" class="img-small img-center img-responsive">
+                  <p class="text-center"><a href="/checkmate-challenge" class="btn btn-success">Checkmate Challenge</a></p>
+               </div>
+              </div>
+              <div class="col-md-3">
+                <div class="level">
+                  <img src="images/Kelvin.jpg" class="img-small img-center img-responsive">
+                  <p class="text-center"><a href="/play-pawn" class="btn btn-warning">Pawn Game</a></p>
+               </div>
+             </div>
+              <div class="col-md-3">
+                <div class="level">
+                  <h4 class="subtitle"><a>Leadership  board</a></h4>
+                  <table class="table table-hover">
+                      <thead>
+                          <th>Name</th>
+                          <th class="text-center">Score</th>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Aiolos Castor</td>
+                              <td class="text-center">100</td>
+                          </tr>
+                          <tr>
+                              <td>Achilleus Daedalus</td>
+                              <td class="text-center">99</td>
+                          </tr>
+                          <tr>
+                              <td>Evander Hektor</td>
+                              <td class="text-center">98</td>
+                          </tr>
+                          <tr>
+                              <td>Phrixus Menelaus</td>
+                              <td class="text-center">97</td>
+                          </tr>
+                          <tr>
+                              <td>Icarus Cerberus</td>
+                              <td class="text-center">53</td>
+                          </tr>
+                      </tbody>
+                  </table>
                 </div>
-            </div>
+               </div>
+             </div>
+           </div>
+         </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="board">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="level">
-                                <img src="images/Quintessa.jpg" class="img-small img-center img-responsive">
-                                <p class="text-center"><a href="/play-level" class="btn btn-danger">Play Chess</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="level">
-                                <img src="images/Roland.jpg" class="img-small img-center img-responsive">
-                                <p class="text-center"><a href="/checkmate-challenge" class="btn btn-success">Checkmate Challenge</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="level">
-                                <img src="images/Kelvin.jpg" class="img-small img-center img-responsive">
-                                <p class="text-center"><a href="/play-pawn" class="btn btn-warning">Pawn Game</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="level">
-                                <h4 class="subtitle"><a href="/leader-board">Leadership board</a></h4>
-                                <table class="table table-hover">
-                                    <thead>
-                                        <th>Name</th>
-                                        <th class="text-center">Score</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Aiolos Castor</td>
-                                            <td class="text-center">100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Achilleus Daedalus</td>
-                                            <td class="text-center">99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Evander Hektor</td>
-                                            <td class="text-center">98</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Phrixus Menelaus</td>
-                                            <td class="text-center">97</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Icarus Cerberus</td>
-                                            <td class="text-center">53</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Top wrap - Slider -->
