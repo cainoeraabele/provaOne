@@ -1,0 +1,450 @@
+{{#contentFor "pageStyles"}}
+  <link rel='stylesheet' href="/stylesheets/chesshub.css" />
+  <link rel='stylesheet' href="/stylesheets/chessboard-0.3.0.min.css" />
+  <link rel='stylesheet' href="/stylesheets/messenger.css" />
+  <link rel='stylesheet' href="/stylesheets/messenger-spinner.css" />
+  <link rel='stylesheet' href="/stylesheets/messenger-theme-future.css" />
+  <link rel='stylesheet' href="/stylesheets/owl.carousel.css" />
+  <link rel='stylesheet' href="/stylesheets/owl.theme.css" />
+  <link rel='stylesheet' href="/stylesheets/owl.transitions.css" />
+  <link rel="stylesheet" href="/stylesheets/isotope.css">
+{{/contentFor}}
+
+<div class="body">
+  <!-- Header - Fixed menu -->
+  <header>
+      <div class="container">
+          <nav class="navbar navbar-custom navbar-top" role="navigation">
+              <div class="container">
+                  <div class="navbar-header page-scroll">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                          <i class="fa fa-bars"></i>
+                      </button>
+                      <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" />
+                      </a>
+                  </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                      <ul class="nav navbar-nav navigation">
+                          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                          <li>
+                              <a href="/about">About</a>
+                          </li>
+                          <li>
+                              <a href="/why-first-move">Why first move?</a>
+                          </li>
+                          <li class="active">
+                              <a href="/kids-zone" class="active-top">Kids Zone</a>
+                              <ul>
+                                  <li class="page-scroll"><a href="#1">Online play</a>
+                                  </li>
+                                  <li class="page-scroll"><a href="#2">Puzzles</a>
+                                  </li>
+                                  <li class="page-scroll"><a href="#3">Highlights</a>
+                                  </li>
+                                  <li class="page-scroll"><a href="#4">Resources</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="/chess-news">Chess news</a>
+                          </li>
+                          <li class="page-scroll">
+                              <a href="#7">Contact</a>
+                          </li>
+                          <li class="">
+                              <a href="/donate">Donate</a>
+                          </li>
+                          {{#if user}}
+                              <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                              <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                          {{else}}
+                              <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                          {{/if}}
+                      </ul>
+                  </div>
+                  <!-- /.navbar-collapse -->
+              </div>
+              <!-- /.container -->
+          </nav>
+      </div>
+  </header>
+  <!-- Header - Fixed menu -->
+
+  <!-- Top wrap - Slider -->
+  <div class="slider-wrap home-img" id="1" style="z-index:1;">
+      <!--<div class="overlay"></div>-->
+      <div class="slide-content">
+          <div class="main-text">
+              <h4>Welcome to</h4>
+              <h2>KIDS ZONE</h2>
+          </div>
+          <p><em class="line-left"></em><span>PLAY ONLINE!</span><em class="line-right"></em>
+          </p>
+          <a class="intro-btn" href="/login">Log in</a>
+      </div>
+      <a href="#2" class="scroll-btn"></a>
+  </div>
+  <!-- Top wrap - Slider -->
+
+  <!-- PUZZLES -->
+  <section class="about" id="2">
+      <div class="container pr-no">
+          <div class="col-md-12">
+              <h3 class="section-title">PUZZLES</h3>
+              <div class="sep"></div>
+              <div class="space60"></div>
+          </div>
+          <div class="col-md-6 service-info-left animate_disable show">
+              <div class="service-content ">
+                  <div class="">
+                      <h4>Puzzle of the day</h4>
+                      <div id="board1" style="width: 100%"></div>
+                      <div id="pod" data-fen="{{ puzzle.content }}"></div>
+                      <a id="podSolution" href="javascript:void(0)" data-toggle="popover"
+                        data-placement="bottom" data-content="{{ puzzle.solution }}"><i class="fa fa-question-circle"></i> View Answer</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 service-info-right animate_disable show">
+              <div class="service-content">
+                  <div class="">
+                      <h4>Top rated live game on First Move</h4>
+                      <div id="board2" style="width: 100%"></div>
+                      <div id="trg"></div>
+                      <h5 class="text-center"><i class="fa fa-circle-o"></i> M. Carlsen<em>vs</em> <i class="fa fa-circle"></i> B. Spassky</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- PUZZLES -->
+
+  <!-- PUZZLES
+  <section class="services" id="3">
+      <div class="container">
+          <div class="col-md-12">
+              <h3 class="section-title">PUZZLES</h3>
+              <div class="sep"></div>
+              <div class="space60"></div>
+          </div>
+          <div class="col-md-6 service-info-left animate_disable show">
+              <div class="service-content ">
+                  <div class="">
+                      <h4>THIS WEEK'S PUZZLE</h4>
+                      <img src="images/Puzzle-1.png" class="img-responsive">
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 service-info-right animate_disable show">
+              <div class="service-content">
+                  <div class="">
+                      <h4>LAST WEEK'S PUZZLE</h4>
+                      <img src="images/Puzzle-21.png" class="img-responsive">
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+   PUZZLES -->
+
+  <!-- Facts -->
+  <section class="facts" data-stellar-background-ratio="0.3" id="3">
+      <div class="container">
+          <div class="col-md-12">
+              <h3 class="section-title-lite">HIGHLIGHTS</h3>
+              <div class="sep-lite"></div>
+              <div class="space60"></div>
+          </div>
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="col-md-6">
+                      <img src="images/caleb_MrsMcCoy.jpeg" class="img-responsive img-h">
+                  </div>
+                  <div class="col-md-6 highlight">
+                      <h3>CALEB JONES</h3>
+                      <h5>Donnelly Elementary</h5>
+                      <div class="space60"></div>
+                      <p>Caleb is in his second year with the First Move chess program. He has an excellent grasp of the strategies of the game. He uses his knowledge to assist other students. On Saturday Jan 31 he entered the 2009 SOUTHWEST IDAHO SCHOLASTIC NOVICE CHESS CHAMPIONSHIP. Caleb won every game he played and so earned the 1st place trophy in the 3rd Grade division. He was polite, respectful, and a good sport in every game he played. I am proud of his ability, his generosity in sharing his skills and his good sportsmanship.</p>
+                      <p>
+                          Caleb Jones pictured with First Move teacher Debbie McCoy from Donnelly Elementary School, Donnelly Idaho.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Facts -->
+
+  <!-- RESOURCES -->
+  <section class="portfolio-wrap" id="4">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3 class="section-title">RESOURCES</h3>
+                  <div class="sep"></div>
+                  <h5 class="section-subtitle">Visit some of these fun links to find out more about chess and chess in schools.</h5>
+                  <div class="space60"></div>
+              </div>
+              <div class="col-md-12">
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>American Chess School</h4>
+                          <a>http://amchess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Magnet School</h4>
+                          <a>http://chessmagnetschool.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Master</h4>
+                          <a>http://chessmaster.com</a>
+                      </div>
+                  </div>
+                  <div class="space60"></div>
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>Internet Chess Club</h4>
+                          <a>http://www.chessclub.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>United States Chess Federation (USCF)</h4>
+                          <a>http://www.uschess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="space60"></div>
+      </div>
+  </section>
+  <!-- RESOURCES -->
+
+  <!-- GAMES -->
+  <section class="team-wrap kids-zone-team-wrap" id="5">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3 class="section-title">GAMES</h3>
+                  <div class="sep"></div>
+                  <h5 class="section-subtitle">After you have checked out online play, try some of these other fun chess game spots.</h5>
+                  <div class="space60"></div>
+              </div>
+              <div class="col-md-12">
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>American Chess School</h4>
+                          <a>http://amchess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Magnet School</h4>
+                          <a>http://chessmagnetschool.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Master</h4>
+                          <a>http://chessmaster.com</a>
+                      </div>
+                  </div>
+                  <div class="space60"></div>
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>Internet Chess Club</h4>
+                          <a>http://www.chessclub.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>United States Chess Federation (USCF)</h4>
+                          <a>http://www.uschess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="space60"></div>
+  </section>
+  <!-- GAMES -->
+
+  <!-- BOOKS -->
+  <section class="portfolio-wrap" id="6">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3 class="section-title">BOOKS</h3>
+                  <div class="sep"></div>
+                  <h5 class="section-subtitle">Learn more about chess and chess in education with the help of some of the titles below.</h5>
+                  <div class="space60"></div>
+              </div>
+              <div class="col-md-12">
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>American Chess School</h4>
+                          <a>http://amchess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Magnet School</h4>
+                          <a>http://chessmagnetschool.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Master</h4>
+                          <a>http://chessmaster.com</a>
+                      </div>
+                  </div>
+                  <div class="space60"></div>
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>Internet Chess Club</h4>
+                          <a>http://www.chessclub.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>United States Chess Federation (USCF)</h4>
+                          <a>http://www.uschess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="space60"></div>
+  </section>
+  <!-- BOOKS -->
+
+  <!-- APPLICATIONS -->
+  <section class="team-wrap" id="">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3 class="section-title">APPLICATIONS & CD'S</h3>
+                  <div class="sep"></div>
+                  <h5 class="section-subtitle">Improve your game with the help of some of these interactive chess CD’s</h5>
+                  <div class="space60"></div>
+              </div>
+              <div class="col-md-12">
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>American Chess School</h4>
+                          <a>http://amchess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Magnet School</h4>
+                          <a>http://chessmagnetschool.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>Chess Master</h4>
+                          <a>http://chessmaster.com</a>
+                      </div>
+                  </div>
+                  <div class="space60"></div>
+                  <div class="row">
+                      <div class="col-sm-4 text-center">
+                          <h4>Internet Chess Club</h4>
+                          <a>http://www.chessclub.com</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <h4>United States Chess Federation (USCF)</h4>
+                          <a>http://www.uschess.org</a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="space60"></div>
+  </section>
+  <!-- APPLICATIONS -->
+
+
+  <!-- Contact -->
+  <section class="contact" id="7">
+      <div class="container">
+          <div class="col-md-12">
+              <h3 class="section-title-lite">Contact Us</h3>
+              <div class="sep"></div>
+              <div class="space60"></div>
+          </div>
+          <div class="col-md-6 animate_disable show" style="padding-right:30px;">
+              <form class="contact-form" method="post" id="contact-form" action="mail.php">
+                  <input type="text" name="author" placeholder="Your Name">
+                  <input type="text" name="email" placeholder="Your Email">
+                  <textarea rows="7" name="message" placeholder="Your Message"></textarea>
+                  <button class="s-btn" type="submit">Send</button>
+                  <div class="notifications">
+                      <div id="contactFormSent" class="formSent alert alert-success">
+                          <strong>Your Message Has Been Sent! </strong> Thank you for contacting us.
+                      </div>
+                      <div id="contactFormError" class="formError alert alert-error">
+                          <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="col-md-6 animate_disable show" style="padding-left:30px;">
+              <div class="space40"></div>
+              <div class="contact-info">
+                  <p>Call Us Toll Free: 1.866.973.2342</p>
+                  <p>Email us: <a href="mailto:info@af4c.org">info@af4c.org</a>
+                  </p>
+                  <p>Send us a fax: 1.425.671.5009</p>
+                  <p>Write to us: <a href="https://maps.google.com/maps?q=11120+NE+33RD+PLACE+SUITE+105+BELLEVUE,+WA+98004&hl=en&sll=47.613028,-122.342064&sspn=0.564262,0.617294&hnear=11120+NE+33rd+Pl+%23105,+Bellevue,+Washington+98004&t=m&z=17&iwloc=A">13620 Ne 20th Street, Suite J Bellevue, WA 98005</a>
+                  </p>
+                  <p>Need help?: <a href="mailto:support@1stmove.org">Email our webmaster</a>
+                  </p>
+                  <br>
+                  <p>
+                      <a href="https://www.facebook.com/firstmovechess">
+                          <i class="fa fa-facebook fa-3x"></i>
+                      </a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href="https://twitter.com/AF4C_FirstMove">
+                          <i class="fa fa-twitter fa-3x"></i>
+                      </a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Contact -->
+
+  <!-- Footer - Social -->
+  <section class="social-footer">
+      <div class="container">
+          <ul class="social">
+              <li>
+                  <a href="help.html">
+                      <span>Help</span>
+                      <i class="fa fa-question-circle"></i>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </section>
+  <!-- Footer - Social -->
+</div>
+
+{{#contentFor "pageScripts"}}
+<!-- JavaScript -->
+<script src="/javascripts/jquery-2.1.4.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/jquery.localscroll-1.2.7-min.js"></script>
+<script src="/javascripts/jquery.scrollTo.js"></script>
+<script src="/javascripts/jquery.nav.js"></script>
+<script type="text/javascript" src="/javascripts/chessboard-0.3.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/chess.min.js"></script>
+<script type="text/javascript" src="/javascripts/lodash.min.js"></script>
+<script type="text/javascript" src="/javascripts/moment.min.js"></script>
+<script type="text/javascript" src="/javascripts/messenger.min.js"></script>
+<script type="text/javascript" src="/javascripts/messenger-theme-future.js"></script>
+<script type="text/javascript" src="/javascripts/chesshub.js"></script>
+<script type="text/javascript" src="/javascripts/highcharts.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+{{/contentFor}}

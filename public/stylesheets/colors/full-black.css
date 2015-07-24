@@ -1,0 +1,226 @@
+.navbar-nav > li > a:hover {
+	color: #444444;
+}
+
+.navigation .current a {
+	color: #444444 !important;
+}
+
+.slide-content p span {
+	color: #444444;
+}
+
+.sep {
+	background: url(../../images/black/sep.png) no-repeat center center;
+}
+
+.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span {
+	background: url(../../images/black/paging-active.png);
+}
+
+#owl-about .owl-prev,#owl-project-single .owl-prev {
+	background-color: #444444;
+}
+
+#owl-about .owl-next,#owl-project-single .owl-next {
+	background-color: #444444;
+}
+
+.highlight-text {
+	color: #444444;
+}
+
+.btn1:hover,.btn2:hover,.intro-btn:hover,.btn3:hover {
+	border: solid 1px #444444;
+	color: #444444;
+}
+
+.service-content:hover h4 {
+	color: #444444;
+}
+
+.ico1 {
+	background: url(../../images/black/ico1.png) no-repeat;
+}
+
+.ico2 {
+	background: url(../../images/black/ico2.png) no-repeat;
+}
+
+.ico3 {
+	background: url(../../images/black/ico3.png) no-repeat;
+}
+
+.ico4 {
+	background: url(../../images/black/ico4.png) no-repeat;
+}
+
+.ico5 {
+	background: url(../../images/black/ico5.png) no-repeat;
+}
+
+.ico6 {
+	background: url(../../images/black/ico6.png) no-repeat;
+}
+
+.facts-list li .fact-ico1 {
+	background: url(../../images/black/fact1.png) no-repeat;
+}
+
+.facts-list li .fact-ico2 {
+	background: url(../../images/black/fact2.png) no-repeat;
+}
+
+.facts-list li .fact-ico3 {
+	background: url(../../images/black/fact3.png) no-repeat;
+}
+
+.facts-list li .fact-ico4 {
+	background: url(../../images/black/fact4.png) no-repeat;
+}
+
+.team-social li a:hover {
+	background: url(../../images/black/social-hr.png);
+}
+
+.date {
+	background: url(../../images/black/date.png) no-repeat;
+}
+
+.portfolio-dark-overlay {
+	background: #444444;
+	background: rgba(68,68,68,0.81);
+}
+
+.staff-pic-overlay {
+	color: #444444;
+}
+
+.staff-pic-overlay a {
+	color: #444444;
+}
+
+.team-info:hover .staff-content-wrap {
+	background: #444444;
+}
+
+.progress em {
+	background: #444444;
+}
+
+.wrap-link {
+	color: #444444;
+	border-bottom: 1px solid rgba(68,68,68,0.4);
+}
+
+#owl-quote .owl-controls .owl-page span {
+	border: 2px solid #444444;
+}
+
+#owl-quote .owl-controls .owl-page.active span,#owl-quote .owl-controls.clickable .owl-page:hover span {
+	background: #444444;
+}
+
+.contact-info a {
+	color: #444444;
+}
+
+.social li:hover {
+	background: #444444;
+}
+
+.post-meta a {
+	color: #444444;
+}
+
+.post-meta a i {
+	color: #444444;
+}
+
+.date {
+	background: url(../../images/black/date.png) no-repeat;
+}
+
+.post-meta i {
+	color: #444444;
+}
+
+.pm-link:hover {
+	color: #444444 !important;
+}
+
+article h3 a:hover {
+	color: #444444;
+}
+
+.tags a {
+	color: #444444;
+}
+
+.page-navigation li a:hover {
+	border-color: #444444;
+	color: #444444;
+}
+
+.page-navigation li.active a {
+	background: #444444;
+	border-color: #444444;
+}
+
+.side-widget h5 {
+	color: #444444;
+}
+
+.side-widget ul li a:hover {
+	color: #444444;
+}
+
+.comments-wrap h6 {
+	color: #444444;
+}
+
+.comments-wrap span a {
+	color: #444444;
+}
+
+.comment-form label {
+	color: #444444;
+}
+
+.comment-author {
+	color: #444444;
+}
+
+.reply {
+	background: #444444;
+}
+
+.folio-filter li a {
+	color: #444444;
+	border: 1px solid #444444;
+}
+
+.folio-filter li a:hover {
+	border-color: #444444 !important;
+	background: #444444;
+}
+
+.folio-filter li a.selected {
+	border-color: #444444;
+	background: #444444;
+}
+
+.selected {
+	border-color: #444444;
+	background: #444444;
+}
+
+.s-btn {
+	background: #444444;
+}
+
+.options-head {
+    background: #282828;
+}
+
+

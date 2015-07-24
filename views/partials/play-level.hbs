@@ -1,0 +1,72 @@
+<!--
+<div id="mask">
+    <div class="loader">
+        <img src="images/loading.png" alt='loading'>
+    </div>
+</div>
+-->
+<!-- Header - Fixed menu -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="containerxxx">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/board-game"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <li><a href="/board-game">Dashboard</a></li>
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+
+<!-- Top wrap - Slider -->
+<div class="slider-wrap home-login-img" id="1">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="board">
+        <div class="row">
+          <div class="col-md-3 col-md-offset-3">
+            <div class="level">
+              <img src="images/Quintessa.jpg" class="img-small img-center img-responsive">
+              <p class="text-center"><a href="/player-vs-computer" class="btn btn-danger">Play with Computer</a></p>
+           </div>
+          </div>
+          <div class="col-md-3">
+            <div class="level">
+              <img src="images/Roland.jpg" class="img-small img-center img-responsive">
+              <p class="text-center"><a href="/player-vs-player" class="btn btn-success">Player VS Player</a></p>
+           </div>
+          </div>
+       </div>
+     </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</div>
+<!-- Top wrap - Slider -->

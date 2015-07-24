@@ -1,0 +1,643 @@
+{{#contentFor "pageStyles"}}
+  <link rel='stylesheet' href="/stylesheets/owl.carousel.css" />
+  <link rel='stylesheet' href="/stylesheets/owl.theme.css" />
+  <link rel='stylesheet' href="/stylesheets/owl.transitions.css" />
+  <link rel="stylesheet" href="/stylesheets/isotope.css">
+{{/contentFor}}
+
+<!-- Header - Fixed menu -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="active">
+                            <a class="active-top" href="/about">About</a>
+                            <ul>
+                                <li class="page-scroll"><a href="#1">Overview</a>
+                                </li>
+                                <li class="page-scroll"><a href="#2">How First Move works</a>
+                                </li>
+                                <li class="page-scroll"><a href="#3">Leadership</a>
+                                </li>
+                                <li class="page-scroll"><a href="#7">Board members</a>
+                                </li>
+                                <li class="page-scroll"><a href="#8">Advisors </a>
+                                </li>
+                                <li class="page-scroll"><a href="#5">Supporters</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/why-first-move">Why first move?</a>
+                        </li>
+                        <li>
+                            <a href="/kids-zone">Kids Zone</a>
+                        </li>
+                        <li>
+                            <a href="/chess-news">Chess news</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#6">Contact</a>
+                        </li>
+                        <li class="">
+                            <a href="/donate">Donate</a>
+                        </li>
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+<!-- Header - Fixed menu -->
+<div class="body">
+
+    <!-- About -->
+    <section class="about" id="1">
+        <div class="container pr-no">
+            <div class="col-md-12">
+                <h3 class="section-title">Overview</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-6 about-info animate_disable show">
+                <p>First Move engages young minds and teaches critical and creative thinking skills through the game of chess. While chess can be used at any age, First Move is not a “one size fits all” program. First Move is targeted to the academic standards of 2nd and 3rd grade students. Taught one hour per week by The Chess Lady (via video), classroom teachers facilitate the exercises; no chess experience is necessary.</p>
+            </div>
+            <div class="col-md-6 about-slider pr-no animate_disable show">
+                <div class="embed-video youtube">
+                    <p>
+                        <script src="https://1stmove.evsuite.com/player/YWJvdXQtZmlyc3QtbW92ZS5tcDQ=/?responsive=1&amp;autoResponsive=1&amp;container=evp-XQ0OQNAYRJ" type="text/javascript"></script>
+                    </p>
+                    <div id="evp-XQ0OQNAYRJ" data-role="evp-video" data-evp-id="YWJvdXQtZmlyc3QtbW92ZS5tcDQ=" style="width: 460px; height: 345px; position: relative; text-align: left; direction: ltr; clear: both; opacity: 1;" class="">
+                        <div id="evp-XQ0OQNAYRJ-video-shim" style="width: 460px; height: 345px; position: absolute; background: rgb(0, 0, 0);"></div>
+                        <div id="evp-XQ0OQNAYRJ-video_wrapper" style="position: relative; width: 100%; height: 100%; background: rgb(0, 0, 0);">
+                            <object type="application/x-shockwave-flash" data="http://evs-hosted-154b6fdc98d35d.s3.amazonaws.com/player/assets/jwplayer-5.10/player.swf?v=3" width="100%" height="100%" bgcolor="#000000" id="evp-XQ0OQNAYRJ-video" name="evp-XQ0OQNAYRJ-video" tabindex="0">
+                                <param name="allowfullscreen" value="true">
+                                <param name="allowscriptaccess" value="always">
+                                <param name="seamlesstabbing" value="true">
+                                <param name="wmode" value="transparent">
+                                <param name="flashvars" value="netstreambasepath=http%3A%2F%2Fwww.1stmove.org%2Fabout%2F&amp;id=evp-XQ0OQNAYRJ-video&amp;wmode=transparent&amp;autostart=true&amp;stretching=exactfit&amp;abouttext=EasyVideoSuite&amp;aboutlink=http%3A%2F%2Feasyvideosuite.com%2F&amp;skin=http%3A%2F%2Fevs-hosted-154b6fdc98d35d.s3.amazonaws.com%2Fplayer%2Fassets%2Fjwplayer-5.10%2Fskins%2Fmodieus%2Fmodieus.xml%3Fv%3D1.0.5&amp;file=about-first-move.mp4&amp;provider=rtmp&amp;streamer=rtmp%3A%2F%2Fsomq58v7m13bj.cloudfront.net%2Fcfx%2Fst&amp;controlbar.position=over&amp;playlist.position=none&amp;logo.margin=10&amp;logo.hide=true&amp;display.icons=false&amp;volume=100">
+                            </object>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+
+    <!-- Services -->
+    <section class="services" id="2">
+        <div class="container">
+            <div class="col-md-12">
+                <h3 class="section-title">How First Move works</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-6 service-info-left animate_disable show">
+                <div class="service-content ">
+                    <div class="service-ico ico1">
+                    </div>
+                    <div class="service-info">
+                        <h4>Teaches</h4>
+                        <p>STEM skills; critical and creative thinking. Students learn to analyze, plan and execute.</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-ico ico2">
+                    </div>
+                    <div class="service-info">
+                        <h4>Targeted</h4>
+                        <p>To 2nd and 3rd grade students, helping develop cognitive thinking skills.</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-ico ico3">
+                    </div>
+                    <div class="service-info">
+                        <h4>Creates</h4>
+                        <p>Intellectual self-esteem and positive social behavior.</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-ico ico4">
+                    </div>
+                    <div class="service-info">
+                        <h4>Provides</h4>
+                        <p>An academic and social advantage to all kids in every sub-group.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 service-info-right animate_disable show">
+                <div class="service-content">
+                    <div class="service-ico ico5">
+                    </div>
+                    <div class="service-info">
+                        <h4>Proven</h4>
+                        <p>Research and standards based, “First Move increases math and reading aptitude.”</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-ico ico6">
+                    </div>
+                    <div class="service-info">
+                        <h4>Engages</h4>
+                        <p>Students in fun, hands-on learning while connecting them to core subjects.</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-ico ico7">
+                    </div>
+                    <div class="service-info">
+                        <h4>Simple</h4>
+                        <p>Our Chess Lady teaches, classroom teachers facilitate, one 50 minute lesson per week.</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-ico ico8">
+                    </div>
+                    <div class="service-info">
+                        <h4>Prepares</h4>
+                        <p>Students for success in school, the workplace and throughout life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services -->
+
+    <!-- Team -->
+    <section class="team-wrap" id="3">
+        <div class="container no-padding">
+            <div class="col-md-12">
+                <h3 class="section-title">Leadership</h3>
+                <div class="sep"></div>
+                <h5 class="section-subtitle">* photos of us when we were each in 2nd grade.</h5>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/erik_anderson.jpg" class="img-responsive" alt="" />
+                    </div>
+                    <h4>Erik Anderson</h4>
+                    <p>Chairman/CEO</p>
+                </div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/wendi_fischer.jpg" class="img-responsive" alt="" />
+                    </div>
+                    <h4>Wendi Fischer</h4>
+                    <p>Executive Director</p>
+                </div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/Trent-photo-500x546.png" class="img-responsive" alt="" />
+                    </div>
+                    <h4>Trent Dawson</h4>
+                    <p>Chief Financial Officer</p>
+                </div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/kathi_cirar.jpg" class="img-responsive" alt="" />
+                        <a href="mailto:kathi@af4c.org">
+                            <div class="staff-pic-overlay">
+                                <div class="staff-overlay-ctr">
+                                    <span class="envelope"></span> send one e-mail
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h4>Kathi Cirar</h4>
+                    <p>Director of Program Development</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/margee_weaver.jpg" class="img-responsive" alt="" />
+                        <a href="mailto:margee@af4c.org">
+                            <div class="staff-pic-overlay">
+                                <div class="staff-overlay-ctr">
+                                    <span class="envelope"></span> send one e-mail
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h4>Margee Weaver</h4>
+                    <p>Director of Program Development</p>
+                </div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/stacie_durbin.jpg" class="img-responsive" alt="" />
+                        <a href="mailto:stacie@af4c.org">
+                            <div class="staff-pic-overlay">
+                                <div class="staff-overlay-ctr">
+                                    <span class="envelope"></span> send one e-mail
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h4>Stacie Durbin</h4>
+                    <p>Program Manager</p>
+                </div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/karen_klages.jpg" class="img-responsive" alt="" />
+                        <a href="mailto:karen@af4c.org">
+                            <div class="staff-pic-overlay">
+                                <div class="staff-overlay-ctr">
+                                    <span class="envelope"></span> send one e-mail
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h4>Karen Klages</h4>
+                    <p>Project Manager</p>
+                </div>
+            </div>
+            <div class="col-md-3 team-info animate_disable show">
+                <div class="staff-content-wrap">
+                    <div class="staff-pic">
+                        <img src="images/leadership/catilyn.jpg" height="546" width="500" class="img-responsive" alt="" />
+                    </div>
+                    <h4>Caitlyn Anderson</h4>
+                    <p>Administrative Assistant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team -->
+
+    <!-- Info wrap -->
+    <section class="about" id="7">
+        <div class="container pr-no">
+            <div class="col-md-12">
+                <h3 class="section-title">Board Members</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Erik Anderson</h4>
+                <p>President WestRiver Capital, LLC</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Gary P. Brinson</h4>
+                <p>The Brinson Foundation</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Arnab Gupta</h4>
+                <p>Founder and CEO Opera Solutions, LLC</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Alan Heuberger</h4>
+                <p>Portfolio Manager BGI/Cascade Investments, Inc.</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>John Meisenbach</h4>
+                <p>President MCM Financial</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Scott Oki</h4>
+                <p>Founder, Oki Developments Co-Founder, Oki Foundation</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Salome Thomas-EL</h4>
+                <p>(Shaun Alexander Fellow) Author, Principal Stoddart Fleischer Middle School</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Thilo von Selchow</h4>
+                <p>President and CEO ZMD AG Dresden</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Aaron Gershenberg</h4>
+                <p>Managing Partner SVB Capital Funds</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Espen Tøndel</h4>
+                <p>Partner Simonsen Vogt Wiig</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Doug Hirsch</h4>
+                <p>Managing Partner Seneca Capital</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Info wrap -->
+
+    <section class="team-wrap" id="8">
+        <div class="container no-padding">
+            <div class="col-md-12">
+                <h3 class="section-title">Senior Advisors</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Mark Dalton</h4>
+                <p>President
+                    <br> Tudor Investment Corporation</p>
+            </div>
+            <div class="col-md-4 members">
+                <h4>Ron Elgin</h4>
+                <p>President and CEO
+                    <br> DDB Worldwide Communications</p>
+            </div>
+            <div class="space60"></div>
+            <div class="col-md-12">
+                <h3 class="section-title">Advisors</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-12">
+                <h3 class="section-title">STEM Council</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ
+<section class="faq" data-stellar-background-ratio="0.3" id="4">
+<div class="container">
+  <div class="col-md-12">
+    <h3 class="section-title">FAQ</h3>
+    <div class="sep"></div>
+    <div class="space60"></div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: How is First Move different from a chess club?</div>
+    <div class="faq-a">
+      <p>A:<br>Chess clubs have been rapidly growing in schools. They typically meet before school, after school, or during lunch. These clubs are voluntary and focus on a balance of fun and competition. Most charge a fee to cover the cost of coaching and materials. Our goal is to use chess as a learning tool in the 2nd and 3rd grade classroom to support the existing academic, social and emotional goals for their students. This goal has several ramifications.</p>
+
+      <ul>
+        <li>All students in the classroom gain the benefits of chess.</li>
+        <li>In-classroom instruction involves more discussion and group problem solving.</li>
+        <li>Students end up playing to learn, not playing to win.</li>
+        <li>Students transfer the intellectual, social and emotional qualities from the game of chess to the larger world and to school success.</li>
+      </ul>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: Why is First Move only offered in 2nd and 3rd grade?</div>
+    <div class="faq-a"><p>A:</p>
+      <ul>
+        <li>This is a critical time for building a strong foundation of thinking skills.</li>
+        <li>The curriculum is mapped to the National Standards for 2nd and 3rd graders.</li>
+        <li>This is a significant age for developing an attachment to school. If learning is fun, kids have a stronger attachment to school.</li>
+        <li>Studies have shown girls to lose interest in math and science at about 4th or 5th grade. Girls who play chess tend to stick with math and science longer.</li>
+        <li>In many school systems, as kids get older, being smart is not necessarily cool. In 2nd and 3rd grade, kids like to be smart; and chess has the “brand” attribute that people who play chess are smart. Kids who believe they are smart have a funny way of becoming just that.</li>
+      </ul>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: As a teacher, I like the benefits of chess, but I don't play. How can I have First Move in my classroom?</div>
+    <div class="faq-a"><p>A:<br>The majority of teachers do not know how to play chess when they incorporate First Move into their curriculum. Believe it or not, this is actually an advantage! The quality of our First Move curriculum and professional teacher training is at heart of our Foundations’ goals. We have developed an interactive DVD based training program with lessons and reviews that will teach you why chess is such a powerful tool, how it relates to almost every subject, how to play chess, and how to implement chess in the classroom. Every teacher is assigned an e-mentor who will send out tips and hints and answer questions that come up throughout the school year. Our Teacher Education Development Network, TEDNET, connects First Move teachers online and offers them support.</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: Standardized tests are a priority in my district, how does First Move address these tests?</div>
+    <div class="faq-a"><p>A:<br>
+      Chess will never be on a standardized test, but the thinking skills chess teaches will be tested. Chess teaches kids how to analyze and make good decisions, to think strategically and foresee consequences. In the process kids also learn good sportsmanship and patience which are not on the standardized tests either, but nice qualities to see in students.</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: What is the time commitment for First Move?</div>
+    <div class="faq-a"><p>A:<br>
+      First Move is 45-60 minutes per week.</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: How can we have the First Move chess program at our school?</div>
+    <div class="faq-a"><p>A:<br>
+      Contact First Move at 1-866-973-2342</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: What is the cost for First Move?</div>
+    <div class="faq-a"><p>A:<br>
+      Schools (or districts) pay an annual ‘subscription’ on a per classroom basis, with the remaining costs provided by AF4C fund raising efforts.</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: What is included in the First Move program?</div>
+    <div class="faq-a"><p>A:<br>
+      Teachers receive the Teacher Manual complete with two years of curriculum (lessons, worksheets and handouts, tools for assessment, DVD users guides, and optional extended activities), a demonstration board, all chess boards and sets, an interactive DVD of the curriculum, a DVD player, an assigned e-mentor, and TEDNET, our Teacher Education Development Network.</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: If our school has an after school chess club can we still get First Move?</div>
+    <div class="faq-a"><p>A:<br>
+      Absolutely. In fact, chess clubs flourish as First Move introduces all 2nd and 3rd graders to the game of chess, thereby increasing club participation by those students that want to advance their game and/or enter competition.</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+  <div class="col-md-6 faq-question">
+    <div class="faq-q">Q: How can I support an individual school or classroom?</div>
+    <div class="faq-a"><p>A:<br>
+      Contact AF4C by email, <a href="mailto:wendi@af4c.org">wendi@af4c.org</a> or phone, 425-284-3322.</p>
+      <div class="faq-hide">Hide</div>
+    </div>
+  </div>
+</div>
+</section>
+FAQ -->
+
+    <!-- Clients -->
+    <section class="clients" id="5">
+        <div class="container">
+            <div class="col-md-12 animate_disable show">
+                <div id="owl-clients">
+                    <div class="item"><a href="http://www.twosigma.com/"><img src="images/supporters/2sigma.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.ascent.com/"><img src="images/supporters/ascent.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.avistautilities.com/"><img src="images/supporters/avista.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.bwater.com/"><img src="images/supporters/bridgewater1.jpg" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.callawaygolf.com/"><img src="images/supporters/callaway.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://chessmaster.us.ubi.com/"><img src="images/supporters/chessmaster.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.costco.com/"><img src="images/supporters/costco.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.hollandamerica.com/"><img src="images/supporters/holland-america.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.chessclub.com/"><img src="images/supporters/internet-chess-club.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.jpmorgan.com/"><img src="images/supporters/jp-morgan.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.kirklandlife.com/"><img src="images/supporters/kirkland-life.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.svb.com/"><img src="images/supporters/logo-svb-block1.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.ml.com/"><img src="images/supporters/merrill-lynch.png" halt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.microsoft.com/"><img src="images/supporters/microsoft.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.muckleshoot.nsn.us/"><img src="images/supporters/muckleshoot.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.perkinscoie.com/"><img src="images/supporters/PClogo1.gif" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://raikesfoundation.org/"><img src="images/supporters/raikes1.gif" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.salesforce.com"><img src="images/supporters/sales-force.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://seeyourimpact.org/"><img src="images/supporters/see-your-impact.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://ctsi.nsn.us/"><img src="images/supporters/siletz-tibes.png" halt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.seattlefoundation.org/"><img src="images/supporters/the-seattle-foundation.png" halt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.tulaliptribes-nsn.gov/"><img src="images/supporters/tulalip-tribes.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.unitedway.org/"><img src="images/supporters/united-way1.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.uschess.org/"><img src="images/supporters/uscf.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://vijayaenterprises.in/"><img src="images/supporters/vijawa-enterprises.png" alt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.wawomensfoundation.org/"><img src="images/supporters/washington_womans_logo2.gif" halt=""></a>
+                    </div>
+                    <div class="item"><a href="http://www.zmdi.com/"><img src="images/supporters/zmd.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients -->
+
+    <!-- Contact -->
+    <section class="contact" id="6">
+        <div class="container">
+            <div class="col-md-12">
+                <h3 class="section-title-lite">Contact Us</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-6 animate_disable show" style="padding-right:30px;">
+                <form class="contact-form" method="post" id="contact-form" action="mail.php">
+                    <input type="text" name="author" placeholder="Your Name">
+                    <input type="text" name="email" placeholder="Your Email">
+                    <textarea rows="7" name="message" placeholder="Your Message"></textarea>
+                    <button class="s-btn" type="submit">Send</button>
+                    <div class="notifications">
+                        <div id="contactFormSent" class="formSent alert alert-success">
+                            <strong>Your Message Has Been Sent! </strong> Thank you for contacting us.
+                        </div>
+                        <div id="contactFormError" class="formError alert alert-error">
+                            <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 animate_disable show" style="padding-left:30px;">
+                <div class="space40"></div>
+                <div class="contact-info">
+                    <p>Call Us Toll Free: 1.866.973.2342</p>
+                    <p>Email us: <a href="mailto:info@af4c.org">info@af4c.org</a>
+                    </p>
+                    <p>Send us a fax: 1.425.671.5009</p>
+                    <p>Write to us: <a href="https://maps.google.com/maps?q=11120+NE+33RD+PLACE+SUITE+105+BELLEVUE,+WA+98004&hl=en&sll=47.613028,-122.342064&sspn=0.564262,0.617294&hnear=11120+NE+33rd+Pl+%23105,+Bellevue,+Washington+98004&t=m&z=17&iwloc=A">13620 Ne 20th Street, Suite J Bellevue, WA 98005</a>
+                    </p>
+                    <p>Need help?: <a href="mailto:support@1stmove.org">Email our webmaster</a>
+                    </p>
+                    <br>
+                    <p>
+                        <a href="https://www.facebook.com/firstmovechess">
+                            <i class="fa fa-facebook fa-3x"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://twitter.com/AF4C_FirstMove">
+                            <i class="fa fa-twitter fa-3x"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+
+    <!-- Footer - Social -->
+    <section class="social-footer">
+        <div class="container">
+            <ul class="social">
+                <li>
+                    <a href="help.html">
+                        <span>Help</span>
+                        <i class="fa fa-question-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Footer - Social -->
+
+</div>
+
+{{#contentFor "pageScripts"}}
+<!-- JavaScript -->
+<script src="javascripts/jquery-1.11.3.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="javascripts/jquery.localscroll-1.2.7-min.js"></script>
+<script src="javascripts/jquery.scrollTo.js"></script>
+<script src="javascripts/jquery.nav.js"></script>
+<script src="javascripts/owl.carousel.min.js"></script>
+<script>
+/* Clients slider */
+$(document).ready(function () {
+    "use strict";
+    $("#owl-clients").owlCarousel({
+        autoPlay: 3000,
+        //Set AutoPlay to 3 seconds
+        navigation: false,
+        pagination: false,
+        items: 5,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [979, 3]
+    });
+});
+</script>
+{{/contentFor}}
+

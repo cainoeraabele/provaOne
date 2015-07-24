@@ -1,0 +1,172 @@
+.navbar-nav > li > a:hover {
+	color: #fd6b6b;
+}
+
+.navigation .current a {
+	color: #fd6b6b !important;
+}
+
+.slide-content p span {
+	color: #fd6b6b;
+}
+
+#owl-about .owl-prev,#owl-project-single .owl-prev {
+	background-color: #fd6b6b;
+}
+
+#owl-about .owl-next,#owl-project-single .owl-next {
+	background-color: #fd6b6b;
+}
+
+.highlight-text {
+	color: #fd6b6b;
+}
+
+.btn1:hover,.btn2:hover,.btn3:hover {
+	border: solid 1px #fd6b6b;
+	color: #fd6b6b;
+}
+
+.intro-btn:hover{
+    border: solid 1px #fd6b6b;
+	color: #fd6b6b;
+    background-color: #fff;
+}
+
+.service-content:hover h4 {
+	color: #fd6b6b;
+}
+
+.portfolio-dark-overlay {
+	background: #fd6b6b;
+	background: rgba(253,107,107,0.81);
+}
+
+.staff-pic-overlay {
+	color: #fd6b6b;
+}
+
+.staff-pic-overlay a {
+	color: #fd6b6b;
+}
+
+.team-info:hover .staff-content-wrap {
+	background: #fd6b6b;
+}
+
+.progress em {
+	background: #fd6b6b;
+}
+
+.wrap-link {
+	color: #fd6b6b;
+	border-bottom: 1px solid rgba(253,107,107,0.4);
+}
+
+#owl-quote .owl-controls .owl-page span {
+	border: 2px solid #fd6b6b;
+}
+
+#owl-quote .owl-controls .owl-page.active span,#owl-quote .owl-controls.clickable .owl-page:hover span {
+	background: #fd6b6b;
+}
+
+.contact-info a {
+	color: #fd6b6b;
+}
+
+.social li:hover {
+	background: #fd6b6b;
+}
+
+.post-meta a {
+	color: #fd6b6b;
+}
+
+.post-meta a i {
+	color: #fd6b6b;
+}
+
+.post-meta i {
+	color: #fd6b6b;
+}
+
+.pm-link:hover {
+	color: #fd6b6b !important;
+}
+
+article h3 a:hover {
+	color: #fd6b6b;
+}
+
+.tags a {
+	color: #fd6b6b;
+}
+
+.page-navigation li a:hover {
+	border-color: #fd6b6b;
+	color: #fd6b6b;
+}
+
+.page-navigation li.active a {
+	background: #fd6b6b;
+	border-color: #fd6b6b;
+}
+
+.side-widget h5 {
+	color: #fd6b6b;
+}
+
+.side-widget ul li a:hover {
+	color: #fd6b6b;
+}
+
+.comments-wrap h6 {
+	color: #fd6b6b;
+}
+
+.comments-wrap span a {
+	color: #fd6b6b;
+}
+
+.comment-form label {
+	color: #fd6b6b;
+}
+
+.comment-author {
+	color: #fd6b6b;
+}
+
+.reply {
+	background: #fd6b6b;
+}
+
+.folio-filter li a {
+	color: #fd6b6b;
+	border: 1px solid #fd6b6b;
+}
+
+.folio-filter li a:hover {
+	border-color: #fd6b6b !important;
+	background: #fd6b6b;
+}
+
+.folio-filter li a.selected {
+	border-color: #fd6b6b;
+	background: #fd6b6b;
+}
+
+.selected {
+	border-color: #fd6b6b;
+	background: #fd6b6b;
+}
+
+.s-btn {
+	background: #fd6b6b;
+}
+
+
+
+
+
+

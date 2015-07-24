@@ -1,0 +1,214 @@
+{{#contentFor "pageStyles"}}
+{{/contentFor}}
+
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/why-first-move">Why first move?</a>
+                        </li>
+                        <li>
+                            <a href="/kids-zone">Kids Zone</a>
+                        </li>
+                        <li>
+                            <a href="/chess-news">Chess news</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#6">Contact</a>
+                        </li>
+                        <li class="">
+                            <a href="/donate">Donate</a>
+                        </li>
+                        <li class="">
+                        </li>
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+<!-- Header - Fixed menu -->
+<div class="body">
+    <!-- Header - Fixed menu -->
+
+    <!-- About -->
+    <section class="about">
+        <div class="container pr-no">
+            <div class="col-md-12">
+                <h3 class="section-title">First Move Gives</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-6 about-info animate_disable show">
+                <p style="margin-bottom:0;">First Move teaches critical and creative thinking skills through chess. The curriculum engages young minds and expands…</p>
+
+                <div class="rw-words rw-words-1">
+                    <span>abstract thinking.</span>
+                    <span>problem solving.</span>
+                    <span>pattern recognition.</span>
+                    <span>decision making.</span>
+                    <span>logical reasoning.</span>
+                </div>
+            </div>
+            <div class="col-md-6 about-slider pr-no animate_disable show">
+                <img src="images/home-1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+
+    <!-- Services -->
+    <section>
+
+        <a href="http://magnuscarlsen.com/">
+            <img src="images/home-header.png" width="100%" alt="http://magnuscarlsen.com/" title="Magnus Carlsen’s website ">
+        </a>
+
+        <a href="http://magnuscarlsen.com/" class=""></a>
+    </section>
+    <!-- Services -->
+
+    <!-- Mission -->
+    <section class="team-wrap mission">
+        <div class="container no-padding">
+            <div class="col-md-12">
+                <h3 class="section-title">Mission</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-12">
+                <p>To integrate chess as a learning tool in our nation’s 2nd and 3rd grade classrooms, in order to have an enduring positive impact on our students’ critical thinking and social skills, and ability to achieve academically.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Mission -->
+
+    <!-- About -->
+    <section class="about">
+        <div class="container pr-no">
+            <div class="col-md-12">
+                <h3 class="section-title">Vision</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-6 about-info pr-no animate_disable show">
+                <img src="images/home-2.jpg" alt="">
+            </div>
+            <div class="col-md-6 about-slider animate_disable show">
+                <p style="margin-bottom:0;">First Move is committed to the education of children. We want to see kids engaged in learning, having a positive educational experience, developing interest in STEM topics, and gaining valuable skills used in the classroom and in life.</p>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+
+    <!-- Info wrap
+    <section class="info-wrap">
+        <div class="container no-padding">
+            <div class="col-md-12">
+                <h3 class="section-title">Have questions?</h3>
+                <div class="space60"></div>
+                <a href="why-first-move.html" class="s-btn btn-info-wrap" target="_blank">Find Out More</a>
+            </div>
+
+        </div>
+    </section>
+    Info wrap -->
+
+    <!-- Contact -->
+    <section class="contact" id="6">
+        <div class="container">
+            <div class="col-md-12">
+                <h3 class="section-title-lite">Contact Us</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-6 animate_disable show" style="padding-right:30px;">
+                <form class="contact-form" method="post" id="contact-form" action="mail.php">
+                    <input type="text" name="author" placeholder="Your Name">
+                    <input type="text" name="email" placeholder="Your Email">
+                    <textarea rows="7" name="message" placeholder="Your Message"></textarea>
+                    <button class="s-btn" type="submit">Send</button>
+                    <div class="notifications">
+                        <div id="contactFormSent" class="formSent alert alert-success">
+                            <strong>Your Message Has Been Sent! </strong> Thank you for contacting us.
+                        </div>
+                        <div id="contactFormError" class="formError alert alert-error">
+                            <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 animate_disable show" style="padding-left:30px;">
+                <div class="space40"></div>
+                <div class="contact-info">
+                    <p>Call Us Toll Free: 1.866.973.2342</p>
+                    <p>Email us: <a href="mailto:info@af4c.org">info@af4c.org</a>
+                    </p>
+                    <p>Send us a fax: 1.425.671.5009</p>
+                    <p>Write to us: <a href="https://maps.google.com/maps?q=11120+NE+33RD+PLACE+SUITE+105+BELLEVUE,+WA+98004&hl=en&sll=47.613028,-122.342064&sspn=0.564262,0.617294&hnear=11120+NE+33rd+Pl+%23105,+Bellevue,+Washington+98004&t=m&z=17&iwloc=A">13620 Ne 20th Street, Suite J Bellevue, WA 98005</a>
+                    </p>
+                    <p>Need help?: <a href="mailto:support@1stmove.org">Email our webmaster</a>
+                    </p>
+                    <br>
+                    <p>
+                        <a href="https://www.facebook.com/firstmovechess">
+                            <i class="fa fa-facebook fa-3x"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://twitter.com/AF4C_FirstMove">
+                            <i class="fa fa-twitter fa-3x"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+
+    <!-- Footer - Social -->
+    <section class="social-footer">
+        <div class="container">
+            <ul class="social">
+                <li>
+                    <a href="help.html">
+                        <span>Help</span>
+                        <i class="fa fa-question-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Footer - Social -->
+</div>
+
+{{#contentFor "pageScripts"}}
+<!-- JavaScript -->
+<script src="javascripts/jquery-2.1.4.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="javascripts/jquery.localscroll-1.2.7-min.js"></script>
+<script src="javascripts/jquery.scrollTo.js"></script>
+<script src="javascripts/jquery.nav.js"></script>
+{{/contentFor}}

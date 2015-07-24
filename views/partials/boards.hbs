@@ -1,0 +1,301 @@
+<!--
+<div id="mask">
+    <div class="loader">
+        <img src="images/loading.png" alt='loading'>
+    </div>
+</div>
+-->
+<!-- Header - Fixed menu -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/why-first-move">Why first move?</a>
+                        </li>
+                        <li class="active">
+                            <a href="/kids-zone" class="active-top">Kids Zone</a>
+                        </li>
+                        <li>
+                            <a href="/chess-news">Chess news</a>
+                        </li>
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+<!-- Header - Fixed menu -->
+<div class="body">
+
+    <!-- Top wrap - Slider -->
+    <div class="slider-wrap home-login-img" id="1">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="board">
+                    <div class="top-board">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="images/logo_1.png" class="img-circle img-responsive">
+                            </div>
+                            <div class="col-md-6">
+                                <h1 class="title">Hello! Firstname</h1>
+                                <br>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper maximus malesuada. Nam ornare suscipit elit eu lacinia. Integer id volutpat libero. Cras congue finibus turpis et iaculis. Proin vitae turpis leo. Vivamus et facilisis turpis. Nulla dapibus nunc sit amet aliquet luctus. Proin accumsan imperdiet metus,</p>
+                                <br>
+                                <a class="btn btn-info">Continue play <i class="fa fa-angle-right"></i></a>
+                            </div>
+                            <div class="col-md-3">
+                                <h4 class="subtitle"><a>Leadership  board</a></h4>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th>Name</th>
+                                        <th class="text-center">Score</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Aiolos Castor</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Achilleus Daedalus</td>
+                                            <td class="text-center">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Evander Hektor</td>
+                                            <td class="text-center">98</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phrixus Menelaus</td>
+                                            <td class="text-center">97</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Icarus Cerberus</td>
+                                            <td class="text-center">53</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space60"></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="level">
+                                <div class="check">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-xs-offset-3">
+                                        <img src="images/pawn.png" class="img-responsive">
+                                    </div>
+                                </div>
+                                <p class="text-center">Complete <b>50%</b>
+                                </p>
+                                <p class="text-center">
+                                    <i class="fa fa-square pro"></i>
+                                    <i class="fa fa-square pro"></i>
+                                    <i class="fa fa-square pro"></i>
+                                    <i class="fa fa-square pro"></i>
+                                    <i class="fa fa-square pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="level">
+                                <div class="lock">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-xs-offset-3">
+                                        <img src="images/rook.png" class="img-responsive">
+                                    </div>
+                                </div>
+                                <p class="text-center">Complete 0%</p>
+                                <p class="text-center">
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="level">
+                                <div class="lock">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-xs-offset-3">
+                                        <img src="images/knight.png" class="img-responsive">
+                                    </div>
+                                </div>
+                                <p class="text-center">Complete 0%</p>
+                                <p class="text-center">
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space60"></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="level">
+                                <div class="lock">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-xs-offset-3">
+                                        <img src="images/bishop.png" class="img-responsive">
+                                    </div>
+                                </div>
+                                <p class="text-center">Complete 0%</p>
+                                <p class="text-center">
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="level">
+                                <div class="lock">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-xs-offset-3">
+                                        <img src="images/queen.png" class="img-responsive">
+                                    </div>
+                                </div>
+                                <p class="text-center">Complete 0%</p>
+                                <p class="text-center">
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="level">
+                                <div class="lock">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-xs-offset-3">
+                                        <img src="images/king.png" class="img-responsive">
+                                    </div>
+                                </div>
+                                <p class="text-center">Complete 0%</p>
+                                <p class="text-center">
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                    <i class="fa fa-square-o pro"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top wrap - Slider -->
+
+
+    <!-- Footer - Social -->
+    <section class="social-footer">
+        <div class="container">
+            <ul class="social">
+                <li>
+                    <a href="help.html">
+                        <span>Help</span>
+                        <i class="fa fa-question-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Footer - Social -->
+
+</div>
+

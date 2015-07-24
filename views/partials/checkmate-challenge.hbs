@@ -1,0 +1,955 @@
+{{#contentFor "pageStyles"}}
+  <link rel='stylesheet' href="/stylesheets/chesshub.css" />
+  <link rel='stylesheet' href="/stylesheets/chessboard-0.3.0.min.css" />
+  <link rel='stylesheet' href="/stylesheets/messenger.css" />
+  <link rel='stylesheet' href="/stylesheets/messenger-spinner.css" />
+  <link rel='stylesheet' href="/stylesheets/messenger-theme-future.css" />
+  <link rel="stylesheet" href="/stylesheets/isotope.css">
+{{/contentFor}}
+
+<!-- Header - Fixed menu -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/board-game"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <li><a href="/board-game">Dashboard</a></li>
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+
+<!-- Top wrap - Slider -->
+<div class="slider-wrap home-login-img" id="1">
+    <div class="container-fluid">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="board">
+                <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/0/Queen & Rook vs King 1"><div id="cc1" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen & Rook vs King #1
+                            </p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/1/Queen & Rook vs King 2"><div id="cc2" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen & Rook vs King #2</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/2/Queen & Rook vs King 3"><div id="cc3" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen & Rook vs King #3</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/3/Queen & Rook vs King 4"><div id="cc4" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen & Rook vs King #4</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/4/2 Rooks vs King 1"><div id="cc5" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">2 Rooks vs King #1</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/5/2 Rooks vs King 2"><div id="cc6" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">2 Rooks vs King #2</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space60"></div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/6/2 Rooks vs King 3"><div id="cc7" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">2 Rooks vs King #3</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/7/2 Rooks vs King 4"><div id="cc8" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">2 Rooks vs King #4</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/8/Queen vs King 1"><div id="cc9" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen vs King #1</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--start new -->
+                   <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/9/Queen vs King 2"><div id="cc10" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen vs King #2
+                            </p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/10/Queen vs King 3"><div id="cc11" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen vs King #3</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/11/Queen vs King 4"><div id="cc12" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Queen vs King #4</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/12/Rook vs King 1"><div id="cc13" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Rook vs King #1
+                            </p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/13/Rook vs King 2"><div id="cc14" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Rook vs King #2</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/14/Rook vs King 3"><div id="cc15" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Rook vs King #3</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/15/2 Bishops vs King 1"><div id="cc16" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">2 Bishops vs King #1
+                            </p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/16/2 Bishops vs King 2"><div id="cc17" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">2 Bishops vs King #2</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/17/2 Bishops vs King 3"><div id="cc18" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">2 Bishops vs King #3</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/18/Bishop & Knight vs King 1"><div id="cc19" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Bishop & Knight vs King #1
+                            </p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/19/Bishop & Knight vs King 2"><div id="cc20" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Bishop & Knight vs King #2</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/20/Bishop & Knight vs King 3"><div id="cc21" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Bishop & Knight vs King #3</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/21/Bishop & Knight vs King 4"><div id="cc22" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Bishop & Knight vs King #4
+                            </p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/22/Pawn vs King 1"><div id="cc23" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Pawn vs King #1</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/23/Pawn vs King 2"><div id="cc24" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Pawn vs King #2</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="space60"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/24/Pawn vs King 3"><div id="cc25" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Pawn vs King #3
+                            </p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="level">
+                            <div class="lock">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <a href="/play-checkmate-challenge/25/Pawn vs King 4"><div id="cc26" style="width: 200px" class="center"></div></a>
+                            </div>
+                            <p class="text-center">Pawn vs King #4</p>
+                            <p class="text-center">
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                                <i class="fa fa-square-o pro"></i>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                   
+                
+            </div>
+        </div>
+    </div>
+</div>
+{{#contentFor "pageScripts"}}
+<!-- JavaScript -->
+<script src="/javascripts/jquery-2.1.4.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/jquery.localscroll-1.2.7-min.js"></script>
+<script src="/javascripts/jquery.scrollTo.js"></script>
+<script src="/javascripts/jquery.nav.js"></script>
+<script type="text/javascript" src="/javascripts/chessboard-0.3.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/chess.min.js"></script>
+<script type="text/javascript" src="/javascripts/lodash.min.js"></script>
+<script type="text/javascript" src="/javascripts/moment.min.js"></script>
+<script type="text/javascript" src="/javascripts/messenger.min.js"></script>
+<script type="text/javascript" src="/javascripts/messenger-theme-future.js"></script>
+<script type="text/javascript" src="/javascripts/chesshub.js"></script>
+<script type="text/javascript" src="/javascripts/highcharts.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var fen_all =  ['4k3/8/8/8/8/8/8/4K1RQ w - - 0 1','8/8/8/4k3/8/8/8/4K1RQ w - - 0 1','8/8/8/4k3/8/8/8/R3K2Q w - - 0 1','8/3pkp2/4p3/8/8/8/8/4K1RQ w - - 0 1','4k3/8/8/8/8/8/8/R3K2R w - - 0 1','8/4k3/8/8/8/8/8/4K1RR w - - 0 1','R7/8/8/4k3/8/8/8/4K2R w - - 0 1','8/3pkp2/4p3/8/8/8/8/R3K2R w - - 0 1','4k3/8/8/8/8/8/8/4K2Q w - - 0 1','8/4k3/8/8/8/8/8/4K2Q w - - 0 1','8/8/8/4k3/8/8/8/4K2Q w - - 0 1','8/3pkp2/4p3/8/8/8/8/4K2Q w - - 0 1','4k3/8/8/8/8/8/8/4K2R w - - 0 1','8/8/8/4k3/8/8/8/4K2R w - - 0 1','K7/8/8/4k3/8/8/8/7R w - - 0 1','7k/8/6K1/2B5/8/8/6B1/8 w - - 0 1','3k4/8/3BB3/4K3/8/8/8/8 w - - 0 1','8/8/8/4k3/8/8/8/2B1KB2 w - - 0 1','k7/8/1K6/5B2/8/8/8/7N w - - 0 1','3k4/8/3K2B1/2N5/8/8/8/8 w - - 0 1','6k1/8/5K2/4NB2/8/8/8/8 w - - 0 1','8/8/8/4k3/8/8/8/4KBN1 w - - 0 1','8/6k1/8/8/8/P5K1/8/8 w - - 0 1','8/3k4/1K6/8/P7/8/8/8 w - - 0 1','4k3/8/3K4/4P3/8/8/8/8 w - - 0 1','4k3/8/8/8/8/8/4P3/4K3 w - - 0 1']
+        var fen   = null
+        var cc    = null
+        var board = null
+        var init1 = function() {
+                var fen = fen_all[0]
+                var cc = 'cc1';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init1);
+        var init2 = function() {
+                var fen = fen_all[1]
+                var cc = 'cc2';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init2);
+        var init3 = function() {
+                var fen = fen_all[2]
+                var cc = 'cc3';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init3);
+        var init4 = function() {
+                var fen = fen_all[3]
+                var cc = 'cc4';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init4);
+        var init5 = function() {
+                var fen = fen_all[4]
+                var cc = 'cc5';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init5);
+        var init6 = function() {
+                var fen = fen_all[5]
+                var cc = 'cc6';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init6);
+        var init7 = function() {
+                var fen = fen_all[6]
+                var cc = 'cc7';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init7);
+        var init8 = function() {
+                var fen = fen_all[7]
+                var cc = 'cc8';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init8);
+        var init9 = function() {
+                var fen = fen_all[8]
+                var cc = 'cc9';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init9);
+        var init10 = function() {
+                var fen = fen_all[9]
+                var cc = 'cc10';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init10);
+        
+        
+        /*new start*/
+        var init11 = function() {
+                var fen = fen_all[10]
+                var cc = 'cc11';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init11);
+        var init12 = function() {
+                var fen = fen_all[11]
+                var cc = 'cc12';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init12);
+        var init13 = function() {
+                var fen = fen_all[12]
+                var cc = 'cc13';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init13);
+        var init14 = function() {
+                var fen = fen_all[13]
+                var cc = 'cc14';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init14);
+        var init15 = function() {
+                var fen = fen_all[14]
+                var cc = 'cc15';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init15);
+        var init16 = function() {
+                var fen = fen_all[15]
+                var cc = 'cc16';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init16);
+        var init17 = function() {
+                var fen = fen_all[16]
+                var cc = 'cc17';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init17);
+        var init18 = function() {
+                var fen = fen_all[17]
+                var cc = 'cc18';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init18);
+        var init19 = function() {
+                var fen = fen_all[18]
+                var cc = 'cc19';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init19);
+        var init20 = function() {
+                var fen = fen_all[19]
+                var cc = 'cc20';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init20);
+        
+        var init21 = function() {
+                var fen = fen_all[20]
+                var cc = 'cc21';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init21);
+        var init22 = function() {
+                var fen = fen_all[21]
+                var cc = 'cc22';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init22);
+        var init23 = function() {
+                var fen = fen_all[22]
+                var cc = 'cc23';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init23);
+        var init24 = function() {
+                var fen = fen_all[23]
+                var cc = 'cc24';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init24);
+        var init25 = function() {
+                var fen = fen_all[24]
+                var cc = 'cc25';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init25);
+        var init26 = function() {
+                var fen = fen_all[25]
+                var cc = 'cc26';
+                var board = new ChessBoard(cc, fen);
+            };
+            $(document).ready(init26);
+        
+        
+    });
+
+</script>
+
+{{/contentFor}}

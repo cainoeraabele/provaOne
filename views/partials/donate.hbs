@@ -1,0 +1,299 @@
+{{#contentFor "pageStyles"}}
+  <link rel='stylesheet' href="/stylesheets/owl.carousel.css" />
+  <link rel='stylesheet' href="/stylesheets/owl.theme.css" />
+  <link rel='stylesheet' href="/stylesheets/owl.transitions.css" />
+  <link rel="stylesheet" href="/stylesheets/isotope.css">
+{{/contentFor}}
+<!-- Header - Fixed menu -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/why-first-move">Why first move?</a>
+                        </li>
+                        <li>
+                            <a href="/kids-zone">Kids Zone</a>
+                        </li>
+                        <li>
+                            <a href="/chess-news">Chess news</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#6">Contact</a>
+                        </li>
+                        <li class="active">
+                            <a href="/donate" class="active-top">Donate</a>
+                        </li>
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+<!-- Header - Fixed menu -->
+<div class="body">
+
+    <!-- About -->
+    <section class="about">
+        <div class="container pr-no">
+            <div class="col-md-12">
+                <h3 class="section-title">Donate</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+
+            <div class="col-md-12 animate_disable show">
+                <p>Donors, supporters, and partners are the driving force behind America’s Foundation for Chess and First Move. With the help of individual donors, foundations, businesses, and government sources, America’s Foundation for Chess is able to affordably deliver First Move to schools and students across the nation.</p>
+                <a href="#" class="s-btn btn-info-wrap" target="_blank">Donate via PayPal</a>
+                <div class="space60"></div>
+            </div>
+        </div>
+    </section>
+    <section class="team-wrap">
+        <div class="container">
+            <div class="col-md-12">
+                <h3 class="section-title">Interesting Facts</h3>
+                <div class="sep"></div>
+                <h5 class="section-subtitle">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam</h5>
+                <div class="space60"></div>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="facts-list animate_disable show">
+                    <li>
+                        <div class="fact-ico1"></div>
+                        <h6>Cost <span id="fact1">0</span></h6>
+                    </li>
+                    <li>
+                        <div class="fact-ico2"></div>
+                        <h6>Number of schools  <span id="fact2">0</span></h6>
+                    </li>
+                    <li>
+                        <div class="fact-ico3"></div>
+                        <h6>Member <span id="fact3">0</span></h6>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="embed-video youtube">
+                    <p>
+                        <script src="https://1stmove.evsuite.com/player/YWJvdXQtZmlyc3QtbW92ZS5tcDQ=/?responsive=1&amp;autoResponsive=1&amp;container=evp-XQ0OQNAYRJ" type="text/javascript"></script>
+                    </p>
+                    <div id="evp-XQ0OQNAYRJ" data-role="evp-video" data-evp-id="YWJvdXQtZmlyc3QtbW92ZS5tcDQ=" style="width: 460px; height: 345px; position: relative; text-align: left; direction: ltr; clear: both; opacity: 1;" class="">
+                        <div id="evp-XQ0OQNAYRJ-video-shim" style="width: 460px; height: 345px; position: absolute; background: rgb(0, 0, 0);"></div>
+                        <div id="evp-XQ0OQNAYRJ-video_wrapper" style="position: relative; width: 100%; height: 100%; background: rgb(0, 0, 0);">
+                            <object type="application/x-shockwave-flash" data="http://evs-hosted-154b6fdc98d35d.s3.amazonaws.com/player/assets/jwplayer-5.10/player.swf?v=3" width="100%" height="100%" bgcolor="#000000" id="evp-XQ0OQNAYRJ-video" name="evp-XQ0OQNAYRJ-video" tabindex="0">
+                                <param name="allowfullscreen" value="true">
+                                <param name="allowscriptaccess" value="always">
+                                <param name="seamlesstabbing" value="true">
+                                <param name="wmode" value="transparent">
+                                <param name="flashvars" value="netstreambasepath=http%3A%2F%2Fwww.1stmove.org%2Fabout%2F&amp;id=evp-XQ0OQNAYRJ-video&amp;wmode=transparent&amp;autostart=true&amp;stretching=exactfit&amp;abouttext=EasyVideoSuite&amp;aboutlink=http%3A%2F%2Feasyvideosuite.com%2F&amp;skin=http%3A%2F%2Fevs-hosted-154b6fdc98d35d.s3.amazonaws.com%2Fplayer%2Fassets%2Fjwplayer-5.10%2Fskins%2Fmodieus%2Fmodieus.xml%3Fv%3D1.0.5&amp;file=about-first-move.mp4&amp;provider=rtmp&amp;streamer=rtmp%3A%2F%2Fsomq58v7m13bj.cloudfront.net%2Fcfx%2Fst&amp;controlbar.position=over&amp;playlist.position=none&amp;logo.margin=10&amp;logo.hide=true&amp;display.icons=false&amp;volume=100">
+                            </object>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container pr-no">
+            <div class="col-md-6">
+                <h4>Support First Move In Schools</h4>
+                <p>
+                    Your donation directly supports improving second and third grade students critical thinking skills, social skills and academic achievement through the use of chess. As a non-profit, we depend on your donation to provide this necessary program to children.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h4>Why Chess?</h4>
+                <p>Chess has been used for centuries as more than just a game, but as a learning tool to help develop and cultivate the mind. First Move focuses on using chess…</p>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+
+    <!-- Clients -->
+    <section class="clients">
+        <div class="container">
+            <div class="col-md-12 animate_disable show">
+                <div id="owl-clients">
+                    <div class="item"><img src="images/supporters/2sigma.png" alt="">
+                    </div>
+                    <!--
+                    <div class="item"><img src="images/supporters/ascent.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/avista.png" alt="">
+                    </div>-->
+                    <div class="item"><img src="images/supporters/bridgewater1.jpg" alt="">
+                    </div>
+                    <!--
+                    <div class="item"><img src="images/supporters/callaway.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/chessmaster.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/costco.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/holland-america.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/internet-chess-club.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/jp-morgan.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/kirkland-life.png" alt="">
+                    </div>-->
+                    <div class="item"><img src="images/supporters/logo-svb-block1.png" alt="">
+                    </div>
+                    <!--
+                    <div class="item"><img src="images/supporters/merrill-lynch.png" halt="">
+                    </div>-->
+                    <div class="item"><img src="images/supporters/microsoft.png" alt="">
+                    </div>
+                    <!--
+                    <div class="item"><img src="images/supporters/muckleshoot.png" alt="">
+                    </div>-->
+                    <div class="item"><img src="images/supporters/PClogo1.gif" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/raikes1.gif" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/sales-force.png" alt="">
+                    </div>
+                    <!--
+                    <div class="item"><img src="images/supporters/see-your-impact.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/siletz-tibes.png" halt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/the-seattle-foundation.png" halt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/tulalip-tribes.png" alt="">
+                    </div>-->
+                    <div class="item"><img src="images/supporters/united-way1.png" alt="">
+                    </div>
+                    <!--
+                    <div class="item"><img src="images/supporters/uscf.png" alt="">
+                    </div>
+                    <div class="item"><img src="images/supporters/vijawa-enterprises.png" alt="">
+                    </div>-->
+                    <div class="item"><img src="images/supporters/washington_womans_logo2.gif" halt="">
+                    </div>
+                    <!--
+                    <div class="item"><img src="images/supporters/zmd.png" alt="">
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients -->
+
+    <!-- Contact -->
+    <section class="contact" id="6">
+        <div class="container">
+            <div class="col-md-12">
+                <h3 class="section-title-lite">Contact Us</h3>
+                <div class="sep"></div>
+                <div class="space60"></div>
+            </div>
+            <div class="col-md-6 animate_disable show" style="padding-right:30px;">
+                <form class="contact-form" method="post" id="contact-form" action="mail.php">
+                    <input type="text" name="author" placeholder="Your Name">
+                    <input type="text" name="email" placeholder="Your Email">
+                    <textarea rows="7" name="message" placeholder="Your Message"></textarea>
+                    <button class="s-btn" type="submit">Send</button>
+                    <div class="notifications">
+                        <div id="contactFormSent" class="formSent alert alert-success">
+                            <strong>Your Message Has Been Sent! </strong> Thank you for contacting us.
+                        </div>
+                        <div id="contactFormError" class="formError alert alert-error">
+                            <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 animate_disable show" style="padding-left:30px;">
+                <div class="space40"></div>
+                <div class="contact-info">
+                    <p>Call Us Toll Free: 1.866.973.2342</p>
+                    <p>Email us: <a href="mailto:info@af4c.org">info@af4c.org</a>
+                    </p>
+                    <p>Send us a fax: 1.425.671.5009</p>
+                    <p>Write to us: <a href="https://maps.google.com/maps?q=11120+NE+33RD+PLACE+SUITE+105+BELLEVUE,+WA+98004&hl=en&sll=47.613028,-122.342064&sspn=0.564262,0.617294&hnear=11120+NE+33rd+Pl+%23105,+Bellevue,+Washington+98004&t=m&z=17&iwloc=A">13620 Ne 20th Street, Suite J Bellevue, WA 98005</a>
+                    </p>
+                    <p>Need help?: <a href="mailto:support@1stmove.org">Email our webmaster</a>
+                    </p>
+                    <br>
+                    <p>
+                        <a href="https://www.facebook.com/firstmovechess">
+                            <i class="fa fa-facebook fa-3x"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://twitter.com/AF4C_FirstMove">
+                            <i class="fa fa-twitter fa-3x"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+
+    <!-- Footer - Social -->
+    <section class="social-footer">
+        <div class="container">
+            <ul class="social">
+                <li>
+                    <a href="help.html">
+                        <span>Help</span>
+                        <i class="fa fa-question-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Footer - Social -->
+</div>
+
+{{#contentFor "pageScripts"}}
+<!-- JavaScript -->
+<script src="javascripts/jquery-2.1.4.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="javascripts/jquery.localscroll-1.2.7-min.js"></script>
+<script src="javascripts/jquery.scrollTo.js"></script>
+<script src="javascripts/jquery.nav.js"></script>
+<script src="javascripts/owl.carousel.min.js"></script>
+<script>
+/* Clients slider */
+$(document).ready(function () {
+    "use strict";
+    $("#owl-clients").owlCarousel({
+        autoPlay: 3000,
+        //Set AutoPlay to 3 seconds
+        navigation: false,
+        pagination: false,
+        items: 5,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [979, 3]
+    });
+});
+</script>
+
+{{/contentFor}}

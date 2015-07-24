@@ -1,0 +1,183 @@
+{{#contentFor "pageStyles"}}
+<link rel="stylesheet" href="/stylesheets/board.css">
+<link rel="stylesheet" href="/stylesheets/kingdom.css">
+{{/contentFor}}
+<!-- Header - Fixed menu -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/board-game"><img src="/images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <li><a href="/board-game">Dashboard</a></li>
+		                <li><a id='new_game' href="#">New Game</a></li>
+		                <li><a id='btn_load_setting' href="#">Game Settings</a></li>
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+
+<!-- Top wrap - Slider -->
+<div class="slider-wrap home-login-img" id="1">
+  <div class="container-fluid">
+    <div class="container-fluid">
+        <div class="space40"></div>
+        <div style="text-align:center;">
+          <div class="main-text">
+            <h3>{{ room_number }}</h3>
+          </div>
+          <div class="space40"></div>
+      <div class="container_fluid" style="padding: 40px 0px; text-align: center">
+        <div class="row">
+          <div id="board" class="container">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="gameSettingModal" class="modal modal-wide fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Chess Game Settings</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    FEN customization
+                                </div>
+                                <!-- List group -->
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <label for="fen_input">Current FEN:</label>
+                                        <input type="text" class="form-control" id="current_fen" readonly>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input type="text" class="form-control" id="fen_input"
+                                               placeholder="Write a new FEN string">
+
+                                        <div class="text-right">
+                                            <button type="button" class="btn btn-info" onclick="board.set_fen()">
+                                                Process FEN
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <select class="form-control" id="fen_selection"
+                                                onchange="board.set_fen_selection()">
+                                            <option>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</option>
+                                            <option>4k3/8/8/8/8/8/8/R3K2R w - - 0 1</option>
+                                            <option>4k3/8/8/8/8/8/8/3QK3 w - - 0 1</option>
+                                            <option>4k3/8/8/8/8/8/8/R3K3 w - - 0 1</option>
+                                            <option>4k3/8/8/8/8/8/8/2B1KB2 w - - 0 1</option>
+                                            <option>4k3/8/8/8/8/8/8/4KBN1 w - - 0 1</option>
+                                            <option>4k2r/8/8/8/8/8/8/3QK3 w - - 0 1</option>
+                                            <option>3qk3/8/8/8/8/8/8/2KQ4 w - - 0 1</option>
+                                            <option>rnbqkbnr/pppp1ppp/8/4p3/5P2/8/PPPPP1PP/RNBQKBNR w - - 0 1</option>
+                                            <option>4k3/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1</option>
+                                            <option>K7/8/8/4k3/8/8/8/7R w - - 0 1</option>
+                                            <option>8/3pkp2/4p3/8/8/8/8/4K1RQ w - - 0 1</option>
+                                            <option>3k4/8/8/8/8/8/7Q/3K4 w - - 0 1</option>
+                                            <option>5r2/3qPbkB/8/7P/8/8/8/1K1R4 w - - 0 1</option>
+                                        </select>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Other settings
+                                </div>
+                                <!-- List group -->
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <button type="button" class="btn" style="background-color:#B58863" id="switch_theme"
+                                                onclick="board.change_theme_color()">
+                                            Switch board color
+                                        </button>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <button type="button" class="btn" style="background-color:#B58863" id="switch_pointers"
+                                                onclick="board.change_pointer_type()">
+
+                                            <span id="pointer_type" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                                            Switch pointer method
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{{#contentFor "pageScripts"}}
+<!-- JavaScript -->
+
+<script type="text/javascript" src="/javascripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src='/javascripts/girdle.js'></script>
+<script type="text/javascript" src='/javascripts/font_fit.js'></script>
+<script type="text/javascript" src='/javascripts/ui.js'></script>    
+
+<script type="text/javascript" src='/javascripts/board-pawn.js'></script>
+<script type="text/javascript" src='/javascripts/kingdom-pawn.js'></script>
+
+<script>
+  $(document).ready(function() {
+    $(".modal-wide").on("show.bs.modal", function() {
+        var height = $(window).height() - 200;
+        $(this).find(".modal-body").css("max-height", height);
+    });
+
+    $("#new_game").click(function(){
+      board.reset();
+    });
+
+    $("#btn_load_setting").click(function(){
+      $("#current_fen").val(board.get_fen());
+      $('#gameSettingModal').modal('show');
+    });
+
+    $("div[style*='wk']").css('display', 'none');
+    $("div[style*='bk']").css('display', 'none');
+  });
+</script>
+{{/contentFor}}

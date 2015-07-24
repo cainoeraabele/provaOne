@@ -1,0 +1,81 @@
+<!--
+<div id="mask">
+    <div class="loader">
+        <img src="images/loading.png" alt='loading'>
+    </div>
+</div>
+-->
+<!-- Header - Fixed menu -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        {{#if user}}
+                            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+                            <li><a href="/logout" class="btn btn-danger top-login">Log Out</a></li>
+                        {{else}}
+                            <li><a href="/login" class="btn btn-danger top-login">Log in</a>
+                        {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+
+<div class="slider-wrap home-login-img" id="1">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-info" style="text-align: center">
+        <h2><img style="width: 120px" src="images/knight.png"> Create New Game</h2>
+  <h2>Level</h2>
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-default">1</button>
+      <button type="button" class="btn btn-default">2</button>
+      <button type="button" class="btn btn-default">3</button>
+      <button type="button" class="btn btn-default">4</button>
+      <button type="button" class="btn btn-default">5</button>
+      <button type="button" class="btn btn-default">6</button>
+      <button type="button" class="btn btn-default">7</button>
+      <button type="button" class="btn btn-default">8</button>
+      <button type="button" class="btn btn-default">9</button>
+    </div>
+    <br>
+    <br>
+    <h2>Side</h2>
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default"><img src="images/wK.png">
+        <br>White</button>
+        <button type="button" class="btn btn-default"><img src="images/rK.png">
+        <br>Random</button>
+        <button type="button" class="btn btn-default"><img src="images/bK.png">
+        <br>Black</button>
+      </div>
+    <br>
+    <br>
+
+<form id="newGameForm" action="/play" method="post">
+  <input type="radio" name="side" value="white" checked style='display: none'>
+  <input type="radio" name="side" value="black" style='display: none'>
+  <button type="submit" class="btn btn-lg btn-warning center-block">Play</button>
+</form>
+    <br>
+    <br>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
