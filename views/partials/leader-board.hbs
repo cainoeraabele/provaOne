@@ -1,0 +1,162 @@
+<header>
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav navigation">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        {{#if user}}
+                        <li><a href="/board-game">Dashboard</a></li>
+                        <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a>
+                        </li>
+                        <li><a href="/logout" class="btn btn-danger top-login">Log Out</a>
+                        </li>
+                        {{else}}
+                        <li><a href="/login" class="btn btn-danger top-login">Log in</a> {{/if}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+</header>
+
+<!-- Top wrap - Slider -->
+<div class="slider-wrap home-login-img" id="1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8">
+                <div class="search-box4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="board">
+                    <div class="level">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="space50"></div>
+                                <h1 class="subtitle">Leadership  board</h1>
+                                <hr>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th>#</th>
+                                        <th>Δrank</th>
+                                        <th>Name</th>
+                                        <th class="text-center">Score</th>
+                                        <th>Last Submission UTC</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="up"><i class="fa fa-arrow-circle-up"></i> 43</td>
+                                            <td><a href="">Aiolos Castor</a></td>
+                                            <td class="text-center">100</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="down"><i class="fa fa-arrow-circle-down"></i> 1</td>
+                                            <td>
+                                                <a href="">Achilleus Daedalus</a>
+                                            </td>
+                                            <td class="text-center">99</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="up"><i class="fa fa-arrow-circle-up"></i> 4</td>
+                                            <td>
+                                                <a href="">Evander Hektor</a>
+                                            </td>
+                                            <td class="text-center">98</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="non"><i class="fa fa-minus"></i></td>
+                                            <td>
+                                                <a href="">Phrixus Menelaus</a>
+                                            </td>
+                                            <td class="text-center">97</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td class="up"><i class="fa fa-arrow-circle-up"></i> 1</td>
+                                            <td>
+                                                <a href="">Icarus Cerberus</a>
+                                            </td>
+                                            <td class="text-center">53</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td class="up"><i class="fa fa-arrow-circle-up"></i> 43</td>
+                                            <td><a href="">Aiolos Castor</a></td>
+                                            <td class="text-center">100</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="down"><i class="fa fa-arrow-circle-down"></i> 1</td>
+                                            <td>
+                                                <a href="">Achilleus Daedalus</a>
+                                            </td>
+                                            <td class="text-center">99</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td class="up"><i class="fa fa-arrow-circle-up"></i> 4</td>
+                                            <td>
+                                                <a href="">Evander Hektor</a>
+                                            </td>
+                                            <td class="text-center">98</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td class="non"><i class="fa fa-minus"></i></td>
+                                            <td>
+                                                <a href="">Phrixus Menelaus</a>
+                                            </td>
+                                            <td class="text-center">97</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td class="up"><i class="fa fa-arrow-circle-up"></i> 1</td>
+                                            <td>
+                                                <a href="">Icarus Cerberus</a>
+                                            </td>
+                                            <td class="text-center">53</td>
+                                            <td class="non">Sun, 17 Oct 2010 21:56:39 (-46.5d)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top wrap - Slider -->

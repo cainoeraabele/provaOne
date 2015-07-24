@@ -450,6 +450,9 @@ var board;
 							result = (board.turn === "b" ? "White" : "Black")
 									+ " wins!";
 							saveElasticsearchHistory(result, game_history);
+                                                        if (board.turn === "w") {
+                                                          window.location.replace("/win-game");
+                                                        }
 						}
 						pause_game();
 						return;

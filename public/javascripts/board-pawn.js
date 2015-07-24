@@ -1457,9 +1457,7 @@ var BOARD = function board_init(el, options) {
             canvas_top = box.top;
             canvas.width = box.width;
             canvas.height = box.height;
-            var scroll = $(window).scrollTop();
-            canvas.style.top = canvas_top + scroll+ "px";
-          
+            canvas.style.top = canvas_top + "px";
             canvas.style.left = canvas_left + "px";
         }
 

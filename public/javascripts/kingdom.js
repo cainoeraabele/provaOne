@@ -444,6 +444,11 @@ var board;
                             cancelable: true,
                             open: true,
                         });
+                      if (moves.checkers.length && !stalemate_by_rules) {
+                        window.location.replace("/win-game");
+                      } else {
+                        window.location.replace("/lost-game");
+                      }
                     }
                     pause_game();
                 }

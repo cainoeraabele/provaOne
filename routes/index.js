@@ -141,7 +141,7 @@ res.render('partials/boards', {
 })
 router.get('/board-game', function(req, res){
 res.render('partials/board-game', {
-      title: 'First Move - Donate',
+      title: 'First Move - Dashboard',
       user: req.user,
       isBoardGamePage: true,
       opponent1: 'V. Anand',
@@ -183,7 +183,7 @@ res.render('partials/play-chess', {
 router.get('/player-vs-computer', function(req, res) {
     res.render('partials/play-chess', {
         title: 'First Move - Game',
-        room_number: 'Player VS Compute xr',
+        room_number: 'Player VS Computer',
         user: req.user,
         isPlayPage: true,
         withComputer: true
@@ -204,6 +204,46 @@ router.get('/play-pawn', function(req, res) {
     res.render('partials/play-pawn', {
         title: 'First Move - Pawn Game',
         room_number: 'Pawn Game',
+        user: req.user,
+        isPlayPage: true,
+        withComputer: false
+    });
+});
+
+router.get('/win-game', function(req, res) {
+    res.render('partials/win-game', {
+        title: 'First Move - Win Game',
+        room_number: 'Win Game',
+        user: req.user,
+        isPlayPage: true,
+        withComputer: false
+    });
+});
+
+router.get('/lost-game', function(req, res) {
+    res.render('partials/lost-game', {
+        title: 'First Move - Lost Game',
+        room_number: 'Lost Game',
+        user: req.user,
+        isPlayPage: true,
+        withComputer: false
+    });
+});
+
+router.get('/leader-board', function(req, res) {
+    res.render('partials/leader-board', {
+        title: 'First Move - Leadership board',
+        room_number: 'Leadership board',
+        user: req.user,
+        isPlayPage: true,
+        withComputer: false
+    });
+});
+
+router.get('/pvp', function(req, res) {
+    res.render('partials/pvp', {
+        title: 'First Move - Player vs player',
+        room_number: 'Player vs player',
         user: req.user,
         isPlayPage: true,
         withComputer: false

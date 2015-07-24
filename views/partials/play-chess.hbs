@@ -42,13 +42,13 @@
     <div class="container-fluid">
         <div class="space40"></div>
         <div style="text-align:center;">
-          <div class="main-text">
+          <div class="container main-text">
             <h3>{{ room_number }}</h3>
           </div>
           <div class="space40"></div>
-      <div class="container" style="padding: 40px 0px; text-align: center">
-        <div class="row">
-          <div id="board" class="container">
+          <div class="container" style="text-align: center">
+            <div class="row">
+            <div id="board" class="container">
           </div>
         </div>
       </div>
@@ -183,7 +183,7 @@
     board.players.w.set_type("human");
     board.players.b.set_type("ai");
     board.reset();
-  {{else}}  
+  {{else}}
       {{#if withComputer }}
         board.players.w.set_type("human");
         board.players.b.set_type("ai");
