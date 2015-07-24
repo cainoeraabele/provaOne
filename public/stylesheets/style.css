@@ -2865,3 +2865,6 @@ a:focus {
 .img-small {
   height: 180px;
 }
+.navbar-custom {
+    z-index: 2;
+}

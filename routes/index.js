@@ -183,7 +183,7 @@ res.render('partials/play-chess', {
 router.get('/player-vs-computer', function(req, res) {
     res.render('partials/play-chess', {
         title: 'First Move - Game',
-        room_number: 'Player VS Computer',
+        room_number: 'Player VS Compute xr',
         user: req.user,
         isPlayPage: true,
         withComputer: true
